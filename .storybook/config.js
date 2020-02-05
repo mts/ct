@@ -26,6 +26,8 @@ const setup = () => {
     },
   })
 
+  addDecorator(story => <div style={{ padding: '2em' }}>{story()}</div>)
+
   addDecorator(story => <BrowserRouter>{story()}</BrowserRouter>)
 
   const contexts = [require.context('../packages/client/src', true, /story*\.js$/)]
