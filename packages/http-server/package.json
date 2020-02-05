@@ -1,0 +1,44 @@
+{
+  "name": "ct-http-server",
+  "description": "CT HTTP Server",
+  "homepage": "https://github.com/mts/ct/#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mts/ct.git",
+    "directory": "packages/server"
+  },
+  "version": "0.1.0",
+  "engines": {
+    "node": "13.0.7",
+    "npm": "6.13.7"
+  },
+  "main": "src/index.js",
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "ct http server"
+  ],
+  "author": {
+    "name": "MTS",
+    "url": "https://github.com/mts"
+  },
+  "scripts": {
+    "start": "nodemon --watch src/server.js --watch ../client/src --ext '.js,.jsx'",
+    "serve": "npm start",
+    "prebuild": "rimraf build",
+    "build": "babel src --out-dir build --copy-files --extensions '.js,.jsx'",
+    "release": "npm publish",
+    "uninstall-packages": "rm -rf node_modules package-lock.json",
+    "install-packages": "npm install",
+    "reinstall-packages": "npm-run-all uninstall-packages install-packages",
+    "npm-update": "npm update"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "nodemon": "^1.19.4",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.1"
+  }
+}
