@@ -1,0 +1,29 @@
+# MacOS
+.DS_Store
+
+# Sublime Text
+app.sublime-project
+app.sublime-workspace
+
+# Storybook
+.storybook-static
+
+# Test
+coverage
+
+# NPM CT
+.npmrc
+npm-debug.log
+lerna-debug.log
+node_modules
+
+# NPM CT Client Package
+packages/client/build
+packages/client/node_modules
+packages/client/.env.develop
+packages/client/.env.release
+
+# NPM CT HTTP Server Package
+packages/http-server/build
+packages/http-server/node_modules
+packages/http-server/.env

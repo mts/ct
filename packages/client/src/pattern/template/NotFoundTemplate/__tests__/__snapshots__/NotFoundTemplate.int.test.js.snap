@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFoundTemplate /> Snaphot must match defaultRender 1`] = `
+<div
+  className=""
+>
+  <h2>
+    Not Found
+  </h2>
+  <div
+    className=""
+  >
+    <h3>
+      No match for 
+      <code>
+        some-path-name
+      </code>
+    </h3>
+  </div>
+  <div />
+</div>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeTemplate /> Snaphot must match defaultRender 1`] = `
+<div
+  className="homeTemplate"
+>
+  HomeTemplate under construction
+</div>
+`;
