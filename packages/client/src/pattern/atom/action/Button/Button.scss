@@ -1,0 +1,47 @@
+@import '../../../../../../library/src/sass/mixin';
+
+.button {
+  font-family: Tahoma, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #555;
+
+  &OuterBorder {
+    box-shadow: 0 0 0 10px #656565;
+    display: inline-block;
+    border-radius: 10px;
+  }
+
+  &FirstInnerBorder {
+    box-shadow: 0 0 0 9px #fff;
+    border-radius: 10px;
+  }
+
+  &SecondInnerBorder {
+    box-shadow: 0 0 0 7px #cbcbcb;
+    border-radius: 10px;
+  }
+
+  &Container {
+    &::before {
+      @include star;
+
+      mask: $base64Star;
+      mask-size: 100%;
+      margin-right: 0.5em;
+    }
+
+    &::after {
+      @include star;
+
+      mask: $base64Star;
+      mask-size: 100%;
+      margin-left: 0.5em;
+    }
+
+    padding: 10px 30px;
+    background-image: linear-gradient(#e3e3e3, #afafaf);
+    border-radius: 8px;
+    box-shadow: 0 0 0 2px #929292;
+  }
+}

@@ -1,0 +1,11 @@
+$base64Star: url(data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iMTBweCIgdmlld0JveD0iMCAwIDEwIDEwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMCAxMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1LDAgNi41NDUsMy4yOTIgMTAsMy44MiA3LjUsNi4zODIgOC4wOSwxMCA1LDguMjkyIDEuOTEsMTAgMi41LDYuMzgyIDAsMy44MiAzLjQ1NSwzLjI5MiIvPjwvc3ZnPg==)
+  no-repeat;
+
+@mixin star {
+  content: '';
+  display: inline-block;
+  background: #888;
+  height: 1.3em;
+  width: 1em;
+  vertical-align: middle;
+}
