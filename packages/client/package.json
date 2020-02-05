@@ -1,0 +1,66 @@
+{
+  "name": "ct-client",
+  "description": "CT Client",
+  "homepage": "https://github.com/mts/ct/#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mts/ct.git",
+    "directory": "packages/client"
+  },
+  "version": "0.1.0",
+  "engines": {
+    "node": "13.0.7",
+    "npm": "6.13.7"
+  },
+  "main": "src/index.js",
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "ct client"
+  ],
+  "author": {
+    "name": "MTS",
+    "url": "https://github.com/mts"
+  },
+  "scripts": {
+    "start": "nodemon --watch webpack.settings.js --watch webpack.common.js --watch webpack.dev.js --exec \"webpack-dev-server --config webpack.dev.js\"",
+    "serve": "echo \"No serve specified\" && exit 0",
+    "build": "webpack --config webpack.prod.js --progress --hide-modules",
+    "release": "npm publish",
+    "uninstall-packages": "rm -rf node_modules package-lock.json",
+    "install-packages": "npm install",
+    "reinstall-packages": "npm-run-all uninstall-packages install-packages",
+    "npm-update": "npm update"
+  },
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "last 2 versions",
+      "Firefox ESR"
+    ],
+    "legacyBrowsers": [
+      "> 1%",
+      "last 2 versions",
+      "Firefox ESR"
+    ],
+    "modernBrowsers": [
+      "last 2 Chrome versions",
+      "not Chrome < 60",
+      "last 2 Safari versions",
+      "not Safari < 10.1",
+      "last 2 iOS versions",
+      "not iOS < 10.3",
+      "last 2 Firefox versions",
+      "not Firefox < 54",
+      "last 2 Edge versions",
+      "not Edge < 15"
+    ]
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "npm-run-all": "^4.1.5",
+    "webpack-dev-server": "^3.10.2"
+  }
+}
