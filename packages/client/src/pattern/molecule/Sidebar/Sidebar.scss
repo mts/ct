@@ -1,0 +1,40 @@
+@import '../../../../../library/src/sass/mixin';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+
+  &Header {
+    @include sidebarHeaderFooter;
+  }
+
+  &Content {
+    display: flex;
+
+    &Section {
+      @include sidebarContentPad;
+
+      background: lightgreen;
+      width: 75%;
+
+      &Article {
+        @include sidebarContentPad;
+
+        background: white;
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    &Aside {
+      @include sidebarContentPad;
+
+      background: pink;
+      width: 25%;
+    }
+  }
+
+  &Footer {
+    @include sidebarHeaderFooter;
+  }
+}
