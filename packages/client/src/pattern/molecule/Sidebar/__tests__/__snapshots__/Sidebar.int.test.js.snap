@@ -1,16 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Sidebar /> Snaphot must match defaultRender 1`] = `
-<div
-  className=""
+<main
+  className="sidebar"
 >
-  Under construction
-   
-  <span
-    aria-label="emoji"
-    role="img"
+  <header
+    className="sidebarHeader"
   >
-    🙂
-  </span>
-</div>
+    <h1>
+      Site
+    </h1>
+  </header>
+  <div
+    className="sidebarContent"
+  >
+    <section
+      className="sidebarContentSection"
+    >
+      <article
+        className="sidebarContentSectionArticle"
+      >
+        <h2>
+          Title
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestias ex officia eligendi reiciendis fuga magnam? Ullam ut ab doloremque accusamus iusto aliquam facilis sapiente!
+        </p>
+      </article>
+      <article
+        className="sidebarContentSectionArticle"
+      >
+        <h2>
+          Title
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestias ex officia eligendi reiciendis fuga magnam? Ullam ut ab doloremque accusamus iusto aliquam facilis sapiente!
+        </p>
+      </article>
+    </section>
+    <aside
+      className="sidebarContentAside"
+    >
+      <div
+        className={
+          Object {
+            "children": Array [],
+            "exports": Object {
+              "Sidebar": [Function],
+            },
+            "filename": "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/Sidebar/Sidebar.jsx",
+            "id": "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/Sidebar/Sidebar.jsx",
+            "loaded": true,
+            "parent": Object {
+              "children": Array [],
+              "exports": Object {
+                "defaultRender": <Sidebar
+                  className=""
+                />,
+              },
+              "filename": "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/Sidebar/__tests__/Sidebar.int.render.js",
+              "id": "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/Sidebar/__tests__/Sidebar.int.render.js",
+              "loaded": true,
+              "parent": Object {
+                "children": Array [],
+                "exports": Object {},
+                "filename": "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/Sidebar/__tests__/Sidebar.int.test.js",
+                "id": "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/Sidebar/__tests__/Sidebar.int.test.js",
+                "loaded": true,
+                "parent": null,
+                "paths": Array [
+                  "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/Sidebar/__tests__/node_modules",
+                  "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/Sidebar/node_modules",
+                  "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/node_modules",
+                  "/Users/mts/MtsHub/ct/packages/client/src/pattern/node_modules",
+                  "/Users/mts/MtsHub/ct/packages/client/src/node_modules",
+                  "/Users/mts/MtsHub/ct/packages/client/node_modules",
+                  "/Users/mts/MtsHub/ct/packages/node_modules",
+                  "/Users/mts/MtsHub/ct/node_modules",
+                  "/Users/mts/MtsHub/node_modules",
+                  "/Users/mts/node_modules",
+                  "/Users/node_modules",
+                  "/node_modules",
+                ],
+              },
+              "paths": Array [
+                "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/Sidebar/__tests__/node_modules",
+                "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/Sidebar/node_modules",
+                "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/node_modules",
+                "/Users/mts/MtsHub/ct/packages/client/src/pattern/node_modules",
+                "/Users/mts/MtsHub/ct/packages/client/src/node_modules",
+                "/Users/mts/MtsHub/ct/packages/client/node_modules",
+                "/Users/mts/MtsHub/ct/packages/node_modules",
+                "/Users/mts/MtsHub/ct/node_modules",
+                "/Users/mts/MtsHub/node_modules",
+                "/Users/mts/node_modules",
+                "/Users/node_modules",
+                "/node_modules",
+              ],
+            },
+            "paths": Array [
+              "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/Sidebar/node_modules",
+              "/Users/mts/MtsHub/ct/packages/client/src/pattern/molecule/node_modules",
+              "/Users/mts/MtsHub/ct/packages/client/src/pattern/node_modules",
+              "/Users/mts/MtsHub/ct/packages/client/src/node_modules",
+              "/Users/mts/MtsHub/ct/packages/client/node_modules",
+              "/Users/mts/MtsHub/ct/packages/node_modules",
+              "/Users/mts/MtsHub/ct/node_modules",
+              "/Users/mts/MtsHub/node_modules",
+              "/Users/mts/node_modules",
+              "/Users/node_modules",
+              "/node_modules",
+            ],
+          }
+        }
+      >
+        <h3>
+          Module
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio rem ab delectus fugit repellendus perspiciatis dolor consequuntur tenetur voluptatem a vitae odit aspernatur? Voluptas quisquam corporis nostrum aspernatur aliquid harum saepe ab pariatur veniam iste ipsam alias nemo voluptatibus doloribus.
+        </p>
+      </div>
+    </aside>
+  </div>
+  <footer
+    className="sidebarFooter"
+  >
+    <h1>
+      About
+    </h1>
+  </footer>
+</main>
 `;
