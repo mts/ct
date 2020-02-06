@@ -8,7 +8,7 @@
     "url": "https://github.com/mts/ct.git",
     "directory": "packages/client"
   },
-  "version": "0.4.0",
+  "version": "0.5.0",
   "engines": {
     "node": "13.0.7",
     "npm": "6.13.7"
