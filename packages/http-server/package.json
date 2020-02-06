@@ -8,7 +8,7 @@
     "url": "https://github.com/mts/ct.git",
     "directory": "packages/server"
   },
-  "version": "0.5.0",
+  "version": "0.6.0",
   "engines": {
     "node": "13.0.7",
     "npm": "6.13.7"
@@ -25,7 +25,7 @@
     "url": "https://github.com/mts"
   },
   "scripts": {
-    "start": "nodemon --watch src/server.js --watch ../client/src --ext '.js,.jsx'",
+    "start": "nodemon --watch src/server.js --watch --ext '.js,.jsx'",
     "serve": "npm start",
     "prebuild": "rimraf build",
     "build": "babel src --out-dir build --copy-files --extensions '.js,.jsx'",

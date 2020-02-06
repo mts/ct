@@ -4,6 +4,10 @@ export const mockAppState = {
     isRunningOnGitHubPages: false,
     isRunningOnHeroku: false,
   },
-  api: {},
+  api: {
+    webSocket: {
+      counter: -1,
+    },
+  },
   ui: {},
 }
