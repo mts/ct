@@ -1,6 +1,6 @@
 import { deepCloneObject } from '../object'
 
-describe('library', () => {
+describe('object', () => {
   describe('deepCloneObject()', () => {
     test('must return a clone of given object', () => {
       const object = { someObject: { someNestedObject: { someNestedObjectProperty: 'some-nested-object-property' } } }
