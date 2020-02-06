@@ -24,7 +24,7 @@ const reducerMockObject = require('../reducer')
 
 describe('client', () => {
   beforeEach(() => {
-    jest.spyOn(stateDefaultMockObject, 'getAppDefaultStateFromWindow').mockReturnValue(mockAppState)
+    jest.spyOn(stateDefaultMockObject, 'getAppDefaultStateFromData').mockReturnValue(mockAppState)
     jest.spyOn(reducerMockObject, 'getAppReducer').mockImplementation(jest.fn())
   })
 
