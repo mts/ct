@@ -1,12 +1,7 @@
 import {
-  windowObjectExists,
   isRunningOnLocalHostViaDomain as isRunningOnLocalHostViaDomainDefault,
   isRunningOnGitHubPages as isRunningOnGitHubPagesDefault,
 } from '../environment'
-
-export function getAppDefaultStateFromWindow() {
-  return windowObjectExists ? window.appDefaultState : {}
-}
 
 export function getAppDefaultStateFromData({ isRunningOnLocalHost, isRunningOnGitHubPages, isRunningOnHeroku }) {
   return {
@@ -15,7 +10,11 @@ export function getAppDefaultStateFromData({ isRunningOnLocalHost, isRunningOnGi
       isRunningOnGitHubPages: isRunningOnGitHubPages || isRunningOnGitHubPagesDefault,
       isRunningOnHeroku,
     },
-    api: {},
+    api: {
+      webSocket: {
+        counter: -1,
+      },
+    },
     ui: {},
   }
 }
