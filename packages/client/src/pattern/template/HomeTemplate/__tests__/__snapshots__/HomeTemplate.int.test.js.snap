@@ -4,6 +4,6 @@ exports[`<HomeTemplate /> Snaphot must match defaultRender 1`] = `
 <div
   className="homeTemplate"
 >
-  HomeTemplate under construction
+  Counter -1
 </div>
 `;

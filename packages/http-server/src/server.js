@@ -1,32 +1,35 @@
 /* eslint no-console: 0 */
 import dotenv from 'dotenv'
-import cors from 'cors'
-import express from 'express'
-import winston from 'winston'
-import expressWinston from 'express-winston'
+import WebSocket from 'ws'
 
 dotenv.config()
 
-const server = express()
-
-server.use(
-  expressWinston.logger({
-    transports: [new winston.transports.Console()],
-    format: winston.format.combine(winston.format.colorize(), winston.format.json()),
-    meta: false,
-    msg: 'HTTP {{req.method}} {{req.url}}',
-    expressFormat: true,
-    colorize: false,
-    ignoreRoute() {
-      return false
-    },
-  }),
-)
-
-server.use(cors())
-
 const PORT = process.env.PORT || 3001
+console.log(`listening on port ${PORT}`)
+const server = new WebSocket.Server({ port: PORT })
 
-server.listen(PORT, () => {
-  console.log(`🚀 MTS HTTP Server listening on port ${PORT}`)
+let counter = -1
+
+server.on('connection', webSocket => {
+  console.log('connection established')
+
+  webSocket.on('message', message => {
+    counter = message
+    console.log(`counter received ~ ${message}`)
+
+    if (counter > 0) {
+      setTimeout(() => {
+        if (webSocket.readyState === WebSocket.OPEN) {
+          webSocket.send(counter - 1)
+          console.log(`counter decremented ~ ${message}`)
+        }
+      }, 1000)
+    } else {
+      counter = -1
+    }
+  })
+
+  webSocket.on('close', () => {
+    console.log(`connection closed`)
+  })
 })
