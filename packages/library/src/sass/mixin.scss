@@ -9,3 +9,12 @@ $base64Star: url(data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4
   width: 1em;
   vertical-align: middle;
 }
+
+@mixin sidebarHeaderFooter {
+  background: lightblue;
+  padding: 1rem;
+}
+
+@mixin sidebarContentPad {
+  padding: 1rem;
+}
