@@ -26,7 +26,7 @@ export function App() {
   )
 }
 
-ReactDOM.hydrate(<App />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'))
 
 if (module.hot) {
   module.hot.accept()
