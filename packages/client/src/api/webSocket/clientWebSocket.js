@@ -1,10 +1,11 @@
+import { counterDefault } from '../../../../library/src/server/webSocket'
 /* eslint-disable no-console, no-unused-vars */
 export function initiateWebSocket(dispatch, apiWebSocketSetCounterAction) {
   const url = 'ws://localhost:3000/'
 
   const webSocket = new WebSocket(url)
 
-  let counter = 10
+  let counter = counterDefault
 
   webSocket.onopen = event => {
     console.log('connection established')
@@ -30,5 +31,7 @@ export function initiateWebSocket(dispatch, apiWebSocketSetCounterAction) {
   webSocket.onclose = event => {
     console.log('connection closed')
   }
+
+  return webSocket
 }
 /* eslint-enable no-console, no-unused-vars */
