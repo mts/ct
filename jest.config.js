@@ -22,7 +22,7 @@ module.exports = {
     '!packages/**/node_modules/**',
     '!packages/**/webpack*',
     '!packages/client/**/mock/**',
-    '!packages/http-server/**',
+    '!packages/websocket-server/**',
     '!packages/library/**/client/startup.js',
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],

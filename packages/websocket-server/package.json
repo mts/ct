@@ -1,5 +1,5 @@
 {
-  "name": "ct-http-server",
+  "name": "ct-websocket-server",
   "description": "CT HTTP Server",
   "homepage": "https://github.com/mts/ct/#readme",
   "license": "MIT",

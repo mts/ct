@@ -140,7 +140,7 @@
       <summary style="color: #006400;">Install</summary>
       <blockquote style="margin: 0; padding: 0 24px">
         Run <kbd>rm -rf node_modules package-lock.json && npm install</kbd> for<br>
-        <kbd>repository root</kbd>, <kbd>packages/http-server folder</kbd> and <kbd>packages/client folder</kbd><br>
+        <kbd>repository root</kbd>, <kbd>packages/websocket-server folder</kbd> and <kbd>packages/client folder</kbd><br>
         <strong><em> to remove node_modules directory, package-lock.json file and install all packages from scratch</em></strong>
       </blockquote>
     </details>
@@ -154,7 +154,7 @@
     <details>
       <summary style="color: #006400;">Start</summary>
       <blockquote style="margin: 0; padding: 0 24px">
-        Run <kbd>npm start</kbd><strong><em> in 1st terminal in packages/http-server folder to start up http-server</em></strong><br>
+        Run <kbd>npm start</kbd><strong><em> in 1st terminal in packages/websocket-server folder to start up websocket-server</em></strong><br>
         Run <kbd>npm start</kbd><strong><em> in 2nd terminal in packages/client to start up webpack-dev-server</em></strong><br>
         Run <kbd>npm run test -- --watch --onlyChanged --verbose</kbd><strong><em> in 3rd terminal to let Jest watch changed tests</em></strong><br>
       </blockquote>
@@ -309,23 +309,23 @@
 ## Server
 
 - NodeJS & ExpressJS Server
-  - deployed to https://dashboard.heroku.com/apps/ct-http-server
-  - running at https://ct-http-server.herokuapp.com/ct
+  - deployed to https://dashboard.heroku.com/apps/ct-websocket-server
+  - running at https://ct-websocket-server.herokuapp.com/ct
 
 ## Heroku Setup, Deployment and Monitoring
 
 - `Login`: `heroku login`
-- `Create app`: `heroku create ct-http-server`
-- `Add remote`: `git remote add origin https://git.heroku.com/ct-http-server.git`
-- `Set build pack 1`: `heroku buildpacks:set -a ct-http-server https://github.com/Pagedraw/heroku-buildpack-select-subdir`
-- `Set build pack 2`: `heroku buildpacks:set https://github.com/heroku/heroku-buildpack-nodejs#v133 -a ct-http-server`
-- `Configure build pack`: `heroku config:add BUILDPACK='packages/server=https://github.com/heroku/heroku-buildpack-nodejs#v133' -a ct-http-server`
-- `Add environment variable(s)`: `heroku config:add PORT='3001' -a ct-http-server`
+- `Create app`: `heroku create ct-websocket-server`
+- `Add remote`: `git remote add origin https://git.heroku.com/ct-websocket-server.git`
+- `Set build pack 1`: `heroku buildpacks:set -a ct-websocket-server https://github.com/Pagedraw/heroku-buildpack-select-subdir`
+- `Set build pack 2`: `heroku buildpacks:set https://github.com/heroku/heroku-buildpack-nodejs#v133 -a ct-websocket-server`
+- `Configure build pack`: `heroku config:add BUILDPACK='packages/server=https://github.com/heroku/heroku-buildpack-nodejs#v133' -a ct-websocket-server`
+- `Add environment variable(s)`: `heroku config:add PORT='3001' -a ct-websocket-server`
 - `Deploy`: `git push heroku master`
 - `Monitor`: `heroku logs --tail`
-- `Check app`: `https://ct-http-server.herokuapp.com/`
+- `Check app`: `https://ct-websocket-server.herokuapp.com/`
 - `Help`: `https://help.heroku.com/P1AVPANS/why-is-my-node-js-app-crashing-with-an-r10-error`
-- `Clone`: `heroku git:clone -a ct-http-server`
+- `Clone`: `heroku git:clone -a ct-websocket-server`
 
 ## Github Pages
 
