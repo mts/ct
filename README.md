@@ -139,23 +139,31 @@
     <details>
       <summary style="color: #006400;">Install</summary>
       <blockquote style="margin: 0; padding: 0 24px">
-        Run <kbd>rm -rf node_modules package-lock.json && npm install</kbd> for<br>
-        <kbd>repository root</kbd>, <kbd>packages/http-server folder</kbd> and <kbd>packages/client folder</kbd><br>
-        <strong><em> to remove node_modules directory, package-lock.json file and install all packages from scratch</em></strong>
+        Run <kbd>rm -rf node_modules package-lock.json && npm install</kbd><br>
+        in the following directories:<br>
+        <ul>
+          <li><kbd>1. repository root</kbd></li>
+          <li><kbd>2. packages/websocket-server</kbd></li>
+          <li><kbd>3. packages/client</kbd></li>
+        </ul>
+        <strong><em> to remove existing node_modules directories, package-lock.json files and install all dependencies from scratch</em></strong>
       </blockquote>
     </details>
     <details>
       <summary style="color: #006400;">Bootstrap</summary>
       <blockquote style="margin: 0; padding: 0 24px">
-        Run <kbd>npm run bootstrap</kbd>
+        Run <kbd>npm run bootstrap</kbd> in repository root
         <strong><em>to run linting, formatting, testing and building sequentially</em></strong>
       </blockquote>
     </details>
     <details>
       <summary style="color: #006400;">Start</summary>
       <blockquote style="margin: 0; padding: 0 24px">
-        Run <kbd>npm start</kbd><strong><em> in 1st terminal in packages/http-server folder to start up http-server</em></strong><br>
+        Run <kbd>npm start</kbd><strong><em> in 1st terminal in packages/websocket-server folder to start up websocket-server</em></strong><br>
+        Check in console <kbd>listening on port 3000</kbd><br>
         Run <kbd>npm start</kbd><strong><em> in 2nd terminal in packages/client to start up webpack-dev-server</em></strong><br>
+        Navigate in browser to <kbd>http://localhost:8080/</kbd><br>
+        Run <kbd>npm t</kbd><strong><em> in 3rd terminal to let Jest run all test suites and check out code coverage report</em></strong><br>
         Run <kbd>npm run test -- --watch --onlyChanged --verbose</kbd><strong><em> in 3rd terminal to let Jest watch changed tests</em></strong><br>
       </blockquote>
     </details>
@@ -202,7 +210,7 @@
                 <ul>
                   <li>"lint:format": "npm-run-all lint format"</li>
                   <li>"lint": "npm-run-all lint:js:jsx lint:scss"</li>
-                  <li>"lint:js:jsx": "eslint --ext .js --ext .jsx packages/**/src/**/*.{js,jsx} --fix"</li>
+                  <li>"lint:js:jsx": "eslint --ext .js --ext .jsx packages/**/src --fix"</li>
                 </ul>
               </li>
               <li>Information: <strong><em>Linting scripts meant for JavaScript files recursively go through all js, jsx files under the src directory checking if the source code conforms to ESLint linting rules, applying auto fixes if possible and outputs all other violations through the console.</em></strong></li>
@@ -232,7 +240,7 @@
                   <ul>
                     <li>"lint:format": "npm-run-all lint format"</li>
                     <li>"lint": "npm-run-all lint:js:jsx lint:scss"</li>
-                    <li>"lint:scss": "stylelint \"packages/**/src/**/*.scss\" --syntax=scss --fix"</li>
+                    <li>"lint:scss": "stylelint \"packages/**/src/**/*.{css,scss}\" --syntax=scss --fix"</li>
                   </ul>
               </li>
               <li>Information: <strong><em>Linting scripts meant for Sass files recursively go through all scss files under the src directory checking if the source code conforms to Stylelint linting rules, applying auto fixes if possible and outputs all other violations through the console.</em></strong></li>
@@ -264,7 +272,7 @@
                 <ul>
                   <li>"format": "npm-run-all format:js:jsx format:scss"</li>
                   <li>"format:js:jsx": "prettier --write \"packages/**/src/**/*.{js,jsx}\""</li>
-                  <li>"format:scss": "prettier --write \"packages/**/src/**/*.scss\""</li>
+                  <li>"format:scss": "prettier --write \"packages/**/src/**/*.{css,scss}\""</li>
                 </ul>
               </li>
               <li>Information: <strong><em>Code formatting scripts meant for JavaScript and Sass files recursively go through all js, jsx and scss files under the src directory enforcing a consistent style by parsing code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.</em></strong></li>
@@ -301,37 +309,25 @@
   </blockquote>
 </details>
 
-## Client
+<h2 style="color: #006400;">🗿 Applications</h2>
 
-- ReactJS, ReduxJS Client
-  - deployed to and running at https://mts.github.io/ct/
-
-## Server
-
-- NodeJS & ExpressJS Server
-  - deployed to https://dashboard.heroku.com/apps/ct-http-server
-  - running at https://ct-http-server.herokuapp.com/ct
-
-## Heroku Setup, Deployment and Monitoring
-
-- `Login`: `heroku login`
-- `Create app`: `heroku create ct-http-server`
-- `Add remote`: `git remote add origin https://git.heroku.com/ct-http-server.git`
-- `Set build pack 1`: `heroku buildpacks:set -a ct-http-server https://github.com/Pagedraw/heroku-buildpack-select-subdir`
-- `Set build pack 2`: `heroku buildpacks:set https://github.com/heroku/heroku-buildpack-nodejs#v133 -a ct-http-server`
-- `Configure build pack`: `heroku config:add BUILDPACK='packages/server=https://github.com/heroku/heroku-buildpack-nodejs#v133' -a ct-http-server`
-- `Add environment variable(s)`: `heroku config:add PORT='3001' -a ct-http-server`
-- `Deploy`: `git push heroku master`
-- `Monitor`: `heroku logs --tail`
-- `Check app`: `https://ct-http-server.herokuapp.com/`
-- `Help`: `https://help.heroku.com/P1AVPANS/why-is-my-node-js-app-crashing-with-an-r10-error`
-- `Clone`: `heroku git:clone -a ct-http-server`
-
-## Github Pages
-
-- rm -rf node_modules/gh-pages/.cache
-- change `https://github.com/mts/ct.git` to `git@github.com:mts/ct.git` in `.git/config`
-
-## Localhost
-
-- `Free port 3000`: `kill $(lsof -t -i :3000)`
+<details>
+  <summary><span style="color: #006400; font-weight: 600; font-size:1.3em"> 🐝 ReactJS, ReduxJS Client</span></summary>
+  <blockquote style="margin: 0; padding: 0 24px">
+    <ul>
+      <li>Running locally at <a style="color: #006400;" href="http://localhost:8080/">http://localhost:8080/</a></li>
+      <li>Logs progress to browser console when interacting with WebSocket Server running at <a style="color: #006400;" href="http://localhost:3000/">http://localhost:3000/</a></li>
+      <li>Deployed to Github Pages and running at <a style="color: #006400;" href="https://mts.github.io/ct/">https://mts.github.io/ct/</a></li>
+    </ul>
+  </blockquote>
+</details>
+<details>
+  <summary><span style="color: #006400; font-weight: 600; font-size:1.3em"> 🐝 WebSocket Server</span></summary>
+  <blockquote style="margin: 0; padding: 0 24px">
+    <ul>
+      <li>Running locally at <a style="color: #006400;" href="http://localhost:3000/">http://localhost:3000/</a></li>
+      <li>Logs progress to terminal console when interacting with WebSocket Client running at <a style="color: #006400;" href="http://localhost:8080/">http://localhost:8080/</a></li>
+      <li>Not deployed to any cloud hosting environment</li>
+    </ul>
+  </blockquote>
+</details>

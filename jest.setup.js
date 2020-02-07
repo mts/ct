@@ -12,3 +12,7 @@ global.renderToJSON = component => renderer.create(component).toJSON()
 global.renderMount = component => mount(component)
 
 global.renderShallow = component => shallow(component)
+
+global.WebSocket = class {
+  send() {} // eslint-disable-line
+}

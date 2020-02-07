@@ -11,7 +11,7 @@ describe('path', () => {
   }
 
   const requirePath = () => {
-    return require('./path')
+    return require('../path')
   }
 
   afterEach(() => {

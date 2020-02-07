@@ -2,7 +2,7 @@
 import React from 'react'
 
 const mockRequireHomePage = () => {
-  const homePagePath = '../pattern/page/HomePage'
+  const homePagePath = '../../pattern/page/HomePage'
   jest.mock(homePagePath, () => {
     return <div>HomePage</div>
   })
@@ -10,7 +10,7 @@ const mockRequireHomePage = () => {
 }
 
 const mockRequireNotFoundPage = () => {
-  const notFoundPagePath = '../pattern/page/NotFoundPage'
+  const notFoundPagePath = '../../pattern/page/NotFoundPage'
   jest.mock(notFoundPagePath, () => {
     return <div>NotFoundPage</div>
   })
@@ -18,7 +18,7 @@ const mockRequireNotFoundPage = () => {
 }
 
 const mockRequirePath = () => {
-  const pathPath = './path'
+  const pathPath = '../path'
   jest.mock(pathPath, () => {
     return {
       homePagePath: 'some-home-page-path',
@@ -31,7 +31,7 @@ describe('index', () => {
   const path = mockRequirePath()
 
   const requireIndex = () => {
-    return require('./index')
+    return require('../index')
   }
 
   describe('homePageRoute', () => {

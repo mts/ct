@@ -4,7 +4,7 @@ import WebSocket from 'ws'
 
 dotenv.config()
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3000
 console.log(`listening on port ${PORT}`)
 const server = new WebSocket.Server({ port: PORT })
 
