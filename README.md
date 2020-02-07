@@ -393,6 +393,52 @@
   </blockquote>
 </details>
 
+<details>
+  <summary><span style="color: #006400; font-weight: 600; font-size:1.3em"> 📗 Component Driven Development</span></summary>
+  <blockquote style="margin: 0; padding: 0 24px">
+    <details>
+      <summary style="color: #006400;">Methodology</summary>
+      <blockquote style="margin: 0; padding: 0 24px">
+        <details>
+          <summary style="color: #006400;">📜 Atomic Design</summary>
+          <blockquote style="margin: 0; padding: 0 24px">
+            <ul>
+              <li><strong><em><a style="color: #006400;" href="http://bradfrost.com/blog/post/atomic-web-design/#atoms">Atoms: </a></em></strong>Each Atom renders an atomic piece of UI</li>
+              <li><strong><em><a style="color: #006400;" href="http://bradfrost.com/blog/post/atomic-web-design/#molecules">Molecules: </a></em></strong>Each molecule renders a composition of atoms</li>
+              <li><strong><em><a style="color: #006400;" href="http://bradfrost.com/blog/post/atomic-web-design/#organisms">Organism: </a></em></strong>Each application of this project implements an organism called Landing which renders a composition of molecules</li>
+              <li><strong><em><a style="color: #006400;" href="http://bradfrost.com/blog/post/atomic-web-design/#templates">Templates: </a></em></strong>Templates consist mostly of groups of organisms stitched together to form pages</li>
+              <li><strong><em><a style="color: #006400;" href="http://bradfrost.com/blog/post/atomic-web-design/#pages">Pages: </a></em></strong>Pages are specific instances of templates</li>
+            </ul>
+          </blockquote>
+        </details>
+      </blockquote>
+    </details>
+    <details>
+      <summary style="color: #006400;">Rendering</summary>
+      <blockquote style="margin: 0; padding: 0 24px">
+        <details>
+          <summary style="color: #006400;">📜 React</summary>
+          <blockquote style="margin: 0; padding: 0 24px">
+            <ul>
+              <li><strong><em>Component Type: </em></strong> Preferred choice of component type is staless functional</li>
+              <li><strong><em>Component Partitions: </em></strong>Each component implements the following partitions along with an index.js
+                <ul>
+                  <li><strong><em>.jsx file: </em></strong>Contains the main UI implementation</li>
+                  <li><strong><em>.scss (optional) file: </em></strong>Used in case of any component specific Sass styling implementation</li>
+                  <li><strong><em>.props.js file: </em></strong>Exposes default props to the component </li>
+                  <li><strong><em>.int.render.js file: </em></strong>Exposes various flavors of the component to snapshots and stories for integration testing purposes</li>
+                  <li><strong><em>.int.test.js file: </em></strong>Implements snapshots for flavors of the component exposed by .int.render.js</li>
+                  <li><strong><em>.int.story.js file: </em></strong>Implements stories for flavors of the component exposed by .int.render.js</li>
+                </ul>
+              </li>
+            </ul>
+          </blockquote>
+        </details>
+      </blockquote>
+    </details>
+  </blockquote>
+</details>
+
 <h2 style="color: #006400;">🗿 Applications</h2>
 
 <details>
