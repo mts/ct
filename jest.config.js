@@ -21,11 +21,9 @@ module.exports = {
     '!packages/**/src/mts/**',
     '!packages/**/node_modules/**',
     '!packages/**/webpack*',
-    '!packages/client/**/route/**',
-    '!packages/client/**/library/**',
+    '!packages/client/**/mock/**',
     '!packages/http-server/**',
-    '!packages/library/src/client/startup.js',
-    '!packages/library/src/server/processSass.js',
+    '!packages/library/**/client/startup.js',
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
