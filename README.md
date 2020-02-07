@@ -334,7 +334,7 @@
                 <details>
                   <summary style="color: #006400;">Flux</summary>
                   <blockquote style="margin: 0; padding: 0 24px">
-                    This project implements <a href="https://facebook.github.io/flux/">Flux </a>based application architecture through Redux state container and Preact integration for Redux. <br>
+                    This project implements <a href="https://facebook.github.io/flux/">Flux </a>based application architecture through Redux state container and React integration for Redux. <br>
                     Components initiate changes by dispatching actions or thunks<br>
                     <img width="400px" height="250px" src=".docs/image/flux-component.png"> <br>
                     Dispatcher processes dispatched actions and thunks and reducer releases new state<br>
@@ -440,8 +440,334 @@
 </details>
 
 <details>
+  <summary><span style="color: #006400; font-weight: 600; font-size:1.3em"> 📗 Scaling Tests</span></summary>
+  <blockquote style="margin: 0; padding: 0 24px">
+    <details>
+      <summary style="color: #006400;">Testing Strategy</summary>
+      <blockquote style="margin: 0; padding: 0 24px">
+        <ul>
+          <li>Information: <strong><em> Testing strategy consists of<br>
+            <ul>
+              <li>
+                Unit testing covering regular logic by implementing <a href="https://jestjs.io/">Jest unit tests</a>
+              </li>
+              <li>
+                Integration testing covering UI logic, look and feel and responsiveness by implementing<br>
+                <a href="https://jestjs.io/">Jest Snapshots</a> and
+                <a href="https://github.com/storybookjs/storybook">Storybook stories</a>
+              </li>
+            </ul>
+            </em></strong>
+          </li>
+          <li><img width="500px" height="250px" src=".docs/image/testing-strategy.jpg"></li>
+        </ul>
+      </blockquote>
+    </details>
+    <details>
+      <summary style="color: #006400;">Code Coverage Report</summary>
+      <blockquote style="margin: 0; padding: 0 24px">
+        <ul>
+          <li>Information: <strong><em> Code coverage thresholds are setup in
+            <a style="color: #006400;" href="https://github.com/mts/ct/blob/master/jest.config.js">jest.config.js</a><br></em></strong>
+          </li>
+          <li><img width="650px" height="800px" src=".docs/image/code-coverage-report.jpg"></li>
+        </ul>
+      </blockquote>
+    </details>    
+    <details>
+      <summary style="color: #006400;">Scaling Unit Tests</summary>
+      <blockquote style="margin: 0; padding: 0 24px">
+        <details>
+          <summary style="color: #006400;">📜 Unit tests run by Jest</summary>
+          <blockquote style="margin: 0; padding: 0 24px">
+            <ul>
+              <li>Package(s): <a style="color: #006400;" href="https://github.com/facebook/jest">jest</a> repository on GitHub</li>
+              <li>Setup file(s):
+                <a style="color: #006400;" href="https://github.com/mts/ct/blob/master/jest.config.js">jest.config.js</a>,
+                <a style="color: #006400;" href="https://github.com/mts/ct/blob/master/jest.setup.js">jest.setup.js</a>
+              </li>
+              <li>Script(s) in project's package.json:
+                <ul>
+                  <li>"test": "jest -u --no-cache --silent --runInBand --coverage"</li>
+                  <li>"test:coverage": "jest --coverage --silent"</li>
+                </ul>
+              </li>
+              <li>Information:
+                <strong><em>
+                <ul>
+                  <li>Check out <a style="color: #006400;" href="https://jestjs.io/">Jest </a> documentation by Facebook</li>
+                  <li>Each JavaScript file whose implementation is subject to unit testing must have a .test.js file in the __tests__ directory at the same level with the targeted implementation</li>
+                  <li>Test blocks must be implemented conforming to the Arrange, Act, Assert pattern</li>
+                  <li>Using Jest API
+                    <ul>
+                      <li>
+                        <details>
+                          <summary><a style="color: #006400;" href="https://jestjs.io/docs/en/tutorial-async#async-await">async/await</a> Test blocks covering asyncronous functions must be implemented conforming to the following pattern</summary>
+                          <blockquote style="margin: 0; padding: 0 24px">
+                            <code>
+                              test('must ...', async () => {
+                                ...
+                                await expect(someFunction).someExpectMethod()
+                              })
+                            </code>
+                          </blockquote>
+                        </details>
+                      </li>
+                      <li>
+                        <details>
+                          <summary><a style="color: #006400;" href="https://jestjs.io/docs/en/api#describename-fn">describe()</a> must be used to group related tests conforming to the following pattern</summary>
+                          <blockquote style="margin: 0; padding: 0 24px">
+                            <code>
+                              describe('file name of module under test', () => {
+                                beforeEach(() => {
+                                  jest.resetModules()
+                                  ...
+                                })
+                                afterEach(() => {
+                                  jest.clearAllMocks()
+                                  ...
+                                }
+                                describe('name of function as the unit under test', () => {
+                                  test('must do something', () => {
+                                  })
+                                  test('must do something else', () => {
+                                  })
+                                })
+                              })
+                            </code>
+                          </blockquote>
+                        </details>
+                      </li>
+                      <li>
+                        <details>
+                          <summary><a style="color: #006400;" href="https://jestjs.io/docs/en/jest-object#jestmockmodulename-factory-options">jest.mock()</a> must be used to mock dependency modules</summary>
+                          <blockquote style="margin: 0; padding: 0 24px">
+                            <code>
+                              jest.mock('some dependency module name or relative path with module name', () => ({
+                                someExposedFunction: () => ({}),
+                                someOtherExposedFunction: jest.fn(),
+                              }))
+                            </code>
+                          </blockquote>
+                        </details>
+                      </li>
+                      <li>
+                        <details>
+                          <summary><a style="color: #006400;" href="https://nodejs.org/api/modules.html#modules_require_id">require()</a> must be used to access a mocked dependency module</summary>
+                          <blockquote style="margin: 0; padding: 0 24px">
+                            <code>
+                              const someModuleMockObject = require('some-module')
+                              const someOtherModuleMockObject = require('../../../relative-path-to/some-module')
+                            </code>
+                          </blockquote>
+                        </details>
+                      </li>
+                      <li>
+                        <details>
+                          <summary><a style="color: #006400;" href="https://jestjs.io/docs/en/jest-object#jestspyonobject-methodname">jest.spyOn()</a> must be used to mock functions exposed by mocked dependency modules conforming to the following pattern</summary>
+                          <blockquote style="margin: 0; padding: 0 24px">
+                            <code>
+                              jest.spyOn(requiredMockObject, 'functionExposedByRequiredMockObject')
+                            </code>
+                          </blockquote>
+                        </details>
+                      </li>
+                      <li>
+                        <details>
+                          <summary><a style="color: #006400;" href="https://jestjs.io/docs/en/mock-function-api#mockfnmockimplementationfn">jest.mockImplementation()</a> must be used to mock the implementations of mocked functions exposed by mocked dependency modules conforming to the following pattern</summary>
+                          <blockquote style="margin: 0; padding: 0 24px">
+                            <code>
+                              jest.spyOn(requiredMockObject, 'functionExposedByRequiredMockObject').mockImplementation(jest.fn())
+                              jest.spyOn(requiredMockObject, 'functionExposedByRequiredMockObject').mockImplementation(jest.fn() => { replace with desired implementation})
+                            </code>
+                          </blockquote>
+                        </details>
+                      </li>
+                      <li>
+                        <details>
+                          <summary><a style="color: #006400;" href="https://jestjs.io/docs/en/mock-function-api#mockfnmockreturnvaluevalue">jest.mockReturnValue()</a> must be used to mock return values of mocked functions exposed by mocked dependency modules conforming to the following pattern</summary>
+                          <blockquote style="margin: 0; padding: 0 24px">
+                            <code>
+                              jest.spyOn(requiredMockObject, 'functionExposedByRequiredMockObject').mockReturnValue(someValue)
+                            </code>
+                          </blockquote>
+                        </details>
+                      </li>
+                      <li>
+                        <details>
+                          <summary><a style="color: #006400;" href="https://jestjs.io/docs/en/expect">expect()</a> must be used to assert expected values against received values using any of the expect <a style="color: #006400;" href="https://jestjs.io/docs/en/expect">methods conforming to the following pattern</a></summary>
+                          <blockquote style="margin: 0; padding: 0 24px">
+                            <code>
+                              expect(someMockFunction).toHaveBeenCalled()
+                              expect(someMockFunction).not.toHaveBeenCalled()
+                              ...
+                              expect(someMockFunction).toHaveBeenCalledTimes(someNumber)
+                              expect(someMockFunction).not.toHaveBeenCalled()
+                              ...
+                              expect(someMockFunction).toHaveBeenCalledWith({ someObjectProperty: 'some-value', someOtherObjectProperty; expect.any(Boolean)})
+                              ...
+                              expect(someObject).toMatchObject(someOtherObject)
+                              expect(someObject).not.toMatchObject(someOtherObject)
+                              ...
+                              expect(someObject).toBe(someOtherObject)
+                              expect(someObject).not.toBe(someOtherObject)
+                              ...
+                              expect(someValue).toEqual(someOtherValue)
+                              expect(someValue).not.toEqual(someOtherValue)
+                              ...
+                              expect(someObject).toBeUndefined()
+                              expect(someObject).not.toBeUndefined()
+                              ...
+                              expect(somevAlue).toBeTruthy()
+                              expect(somevAlue).toBeFalsy()
+                            </code>
+                          </blockquote>
+                        </details>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                </em></strong>
+              </li>
+            </ul>
+          </blockquote>
+        </details>
+      </blockquote>
+    </details>
+    <details>
+      <summary style="color: #006400;">Scaling Integration Tests</summary>
+      <blockquote style="margin: 0; padding: 0 24px">
+        <details>
+          <summary style="color: #006400;">📜 Snapshots run by Jest</summary>
+          <blockquote style="margin: 0; padding: 0 24px">
+            <ul>
+              <li>Package(s):
+                <ul>
+                  <li><a style="color: #006400;" href="https://github.com/facebook/jest">jest</a> repository on GitHub</li>
+                </ul>
+              </li>
+              <li>Setup file(s):
+                <a style="color: #006400;" href="https://github.com/mts/ct/blob/master/jest.config.js">jest.config.js</a>,
+                <a style="color: #006400;" href="https://github.com/mts/ct/blob/master/jest.setup.js">jest.setup.js</a>
+              </li>
+              <li>Script(s) in project's package.json:
+                <ul>
+                  <li>"test": "jest -u --no-cache --silent --runInBand --coverage"</li>
+                  <li>"test:coverage": "jest --coverage --silent"</li>
+                </ul>
+              </li>
+              <li>Information:
+                <strong><em>
+                <ul>
+                  <li>Check out <a style="color: #006400;" href="https://jestjs.io/">Jest </a> documentation by Facebook</li>
+                  <li>Each UI component whose jsx render implementation is subject to integration testing <br>
+                      must have a .int.test.js file with snapshots of various flavors of the component in the __tests__ directory at the same level with the targeted implementation</li>
+                  <li>Using Jest API
+                    <ul>
+                      <li>
+                        <details>
+                          <summary><a style="color: #006400;" href="https://jestjs.io/docs/en/snapshot-testing#snapshot-testing-with-jest">Snapshot Testing with Jest</a> Snapshots must be implemented conforming to the following pattern</summary>
+                          <blockquote style="margin: 0; padding: 0 24px">
+                            <code>
+                            describe('<SomeComponent />', () => {
+                              describe('Snaphot', () => {
+                                test('must match composition', () => {
+                                  expect(global.renderToJSON(<SomeComponent />)).toMatchSnapshot()
+                                })
+                              })
+                            })
+                            </code>
+                          </blockquote>
+                        </details>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                </em></strong>
+              </li>
+            </ul>
+          </blockquote>
+        </details>
+        <details>
+          <summary style="color: #006400;">📜 Stories run by Storybook</summary>
+          <blockquote style="margin: 0; padding: 0 24px">
+            <ul>
+              <li>Package(s):
+                <ul>
+                  <li><a style="color: #006400;" href="https://github.com/storybookjs/storybook">storybook</a> repository on GitHub</li>
+                </ul>
+              </li>
+              <li>Setup file(s):
+                <a style="color: #006400;" href="https://github.com/mts/ct/blob/master/.storybook/addons.js">addons.js</a>,
+                <a style="color: #006400;" href="https://github.com/mts/ct/blob/master/.storybook/config.js">config.js</a> for storybook
+              </li>
+              <li>Script(s) in project's package.json:
+                <ul>
+                  <li>"start-storybook": "NODE_ENV=develop start-storybook -p 3003 -c .storybook"</li>
+                </ul>
+              </li>
+              <li>Information:
+                <strong><em>
+                <ul>
+                  <li>Check out <a style="color: #006400;" href="https://storybook.js.org/docs/basics/introduction/">Storybook </a> documentation by Storybook.js</li>
+                  <li>Each UI component whose jsx render implementation is subject to integration testing <br>
+                      must have a .int.story.js file with stories of various flavors of the component in the __tests__ directory at the same level with the targeted<br>implementation</li>
+                  <li>Using Storybook API
+                    <ul>
+                      <li>
+                        <details>
+                          <summary><a style="color: #006400;" href="https://storybook.js.org/docs/basics/writing-stories/#docs-content">Writing Stories with Storybook</a> Stories must be implemented conforming to the following pattern</summary>
+                          <blockquote style="margin: 0; padding: 0 24px">
+                            <code>storiesOf('SomeApplication/SomeAtomicDesignPattern/SomeComponent', module).add(someRenderInfo.text, () => someRender, someRenderInfo.parameters)</code>
+                          </blockquote>
+                        </details>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                </em></strong>
+              </li>
+            </ul>
+          </blockquote>
+        </details>
+        <details>
+          <summary style="color: #006400;">📜 Using mock store with mock state</summary>
+          <blockquote style="margin: 0; padding: 0 24px">
+            <ul>
+              <li><strong><em>Mock store</em></strong> is acquired in <a href="https://github.com/mts/ct/blob/master/packages/library/src/store/mock.js">mock.js</a> and uses redux-mock-store</li>
+              <li><strong><em>Mock state</em></strong> is acquired in <a href="https://github.com/mts/ct/blob/master/packages/library/src/state/mock.js">mock.js</a></li>
+              <li>
+                <strong><em>Immutability</em></strong> of mock state across integration tests is achieved using deepCloneObject() <br>
+                Changes specific to a test scenario can be applied to the immutable mock state clone. <br>
+                Then adjusted mock state clone is passed on to the mock store and mock store is provided to any UI components involved in the test using react-redux provider
+              </li>
+              <li><strong><em>React Redux Provider</em></strong> is used to provide the mock store with a mock state to any UI component. <br>
+                It accepts any store object in the store prop and provides the store to UI components rendered as its children.
+              </li>
+            </ul>
+        </details>
+      </blockquote>
+    </details>
+  </blockquote>
+</details>
+
+<details>
   <summary><span style="color: #006400; font-weight: 600; font-size:1.3em"> 📗 CI / CD</span></summary>
   <blockquote style="margin: 0; padding: 0 24px">
+    <details>
+      <summary style="color: #006400;">Continuous integration service</summary>
+      <blockquote style="margin: 0; padding: 0 24px">
+        <details>
+          <summary style="color: #006400;">📜 Travis CI</summary>
+          <blockquote style="margin: 0; padding: 0 24px">
+            <ul>
+              <li>Check out <a style="color: #006400;" href="https://docs.travis-ci.com/"> documentation</a> by Travis CI</li>
+              <li>Check out <a style="color: #006400;" href="https://travis-ci.org/mts/ct">builds</a> at Travis CI</li>
+            </ul>
+          </blockquote>
+        </details>
+      </blockquote>
+    </details>    
     <details>
       <summary style="color: #006400;">Branching Model</summary>
       <blockquote style="margin: 0; padding: 0 24px">
