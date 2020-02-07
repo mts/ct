@@ -5,8 +5,8 @@ import { getRange } from '../../../../../../library/src/array'
 
 export function Loop({ className, count }) {
   function StringTimesCount() {
-    const fooString = 'Foo'
-    const barString = 'Bar'
+    const fooString = 'Cloud'
+    const barString = 'Suite'
     const fooBarString = `${fooString}${barString}`
 
     const parsedCount = parseInt(count, 10)

@@ -23,7 +23,7 @@ packages/client/node_modules
 packages/client/.env.develop
 packages/client/.env.release
 
-# NPM CT HTTP Server Package
-packages/http-server/build
-packages/http-server/node_modules
-packages/http-server/.env
+# NPM CT WebSocket Server Package
+packages/websocket-server/build
+packages/websocket-server/node_modules
+packages/websocket-server/.env

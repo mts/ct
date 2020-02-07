@@ -4,4 +4,4 @@ import { getInfo } from '../../../../../../../../.storybook/library'
 
 const defaultRenderInfo = getInfo('default')
 
-storiesOf('Patttern/Atom/Action/Button', module).add(defaultRenderInfo.text, () => defaultRender, defaultRenderInfo.parameters)
+storiesOf('Case 1 Button', module).add(defaultRenderInfo.text, () => defaultRender, defaultRenderInfo.parameters)

@@ -4,4 +4,4 @@ import { getInfo } from '../../../../../../../../.storybook/library'
 
 const defaultRenderInfo = getInfo('default')
 
-storiesOf('Patttern/Atom/Logic/Loop', module).add(defaultRenderInfo.text, () => defaultRender, defaultRenderInfo.parameters)
+storiesOf('Case 4 Loop', module).add(defaultRenderInfo.text, () => defaultRender, defaultRenderInfo.parameters)

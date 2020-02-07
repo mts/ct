@@ -4,4 +4,4 @@ import { getInfo } from '../../../../../../../../.storybook/library'
 
 const defaultRenderInfo = getInfo('default')
 
-storiesOf('Patttern/Molecule/Flex/Sidebar', module).add(defaultRenderInfo.text, () => defaultRender, defaultRenderInfo.parameters)
+storiesOf('Case 2 Flex Sidebar', module).add(defaultRenderInfo.text, () => defaultRender, defaultRenderInfo.parameters)
