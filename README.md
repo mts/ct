@@ -146,7 +146,7 @@
           <li><kbd>1. repository root</kbd></li>
           <li><kbd>2. packages/websocket-server</kbd></li>
           <li><kbd>3. packages/client</kbd></li>
-        </ul>        
+        </ul>
       </blockquote>
     </details>
     <details>
