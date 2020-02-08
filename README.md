@@ -140,31 +140,33 @@
       <summary style="color: #006400;">Install</summary>
       <blockquote style="margin: 0; padding: 0 24px">
         Run <kbd>rm -rf node_modules package-lock.json && npm install</kbd><br>
-        in the following directories:<br>
+        in the following directories to remove existing node_modules directories, package-lock.json files<br>
+        and install all dependencies from scratch:<br>
         <ul>
           <li><kbd>1. repository root</kbd></li>
           <li><kbd>2. packages/websocket-server</kbd></li>
           <li><kbd>3. packages/client</kbd></li>
-        </ul>
-        <strong><em> to remove existing node_modules directories, package-lock.json files and install all dependencies from scratch</em></strong>
+        </ul>        
       </blockquote>
     </details>
     <details>
       <summary style="color: #006400;">Bootstrap</summary>
       <blockquote style="margin: 0; padding: 0 24px">
         Run <kbd>npm run bootstrap</kbd> in repository root
-        <strong><em>to run linting, formatting, testing and building sequentially</em></strong>
+        to run linting, formatting, testing and building sequentially
       </blockquote>
     </details>
     <details>
       <summary style="color: #006400;">Start</summary>
       <blockquote style="margin: 0; padding: 0 24px">
-        Run <kbd>npm start</kbd><strong><em> in 1st terminal in packages/websocket-server folder to start up websocket-server</em></strong><br>
-        Check in console <kbd>listening on port 3000</kbd><br>
-        Run <kbd>npm start</kbd><strong><em> in 2nd terminal in packages/client to start up webpack-dev-server</em></strong><br>
+        Run <kbd>npm run start-storybook</kbd> in 1st terminal in repository root to start up Storybook UI Component Explorer<br>
+        Navigate in browser to <kbd>http://localhost:3003/</kbd><br>
+        Run <kbd>npm t</kbd> in 2nd terminal in repository root to let Jest run all test suites and check out code coverage report<br>
+        Run <kbd>npm run test -- --watch --onlyChanged --verbose</kbd> in 2nd terminal in repository root to let Jest watch changed tests<br>
+        Run <kbd>npm start</kbd> in 3rd terminal in packages/websocket-server folder to start up websocket-server<br>
+        Check out console log <kbd>listening on port 3000</kbd><br>
+        Run <kbd>npm start</kbd> in 4th terminal in packages/client to start up webpack-dev-server<br>
         Navigate in browser to <kbd>http://localhost:8080/</kbd><br>
-        Run <kbd>npm t</kbd><strong><em> in 3rd terminal to let Jest run all test suites and check out code coverage report</em></strong><br>
-        Run <kbd>npm run test -- --watch --onlyChanged --verbose</kbd><strong><em> in 3rd terminal to let Jest watch changed tests</em></strong><br>
       </blockquote>
     </details>
     <details>
