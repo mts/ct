@@ -1,7 +1,7 @@
-# MTS HTTP Server
+# CT WebSocket Server
 
-> MTS HTTP Server implements an ExpressJS Server
+> CT WebSocket Server implements an ExpressJS Server
 
 ## Scripts
 
-- `npm start` starts ExpressJS Server
+- `npm start` starts WebSocket Server
