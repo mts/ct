@@ -14,7 +14,7 @@ describe('default', () => {
     jest.clearAllMocks()
   })
 
-  describe('getDefaultState()', () => {
+  describe('getAppDefaultStateFromData()', () => {
     test('must return context default state with default values', () => {
       environmentMockObject.isRunningOnLocalHostViaDomain = true
 
