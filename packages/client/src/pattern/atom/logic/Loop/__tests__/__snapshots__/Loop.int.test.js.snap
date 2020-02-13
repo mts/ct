@@ -11,16 +11,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     2
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     4
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     7
@@ -29,16 +29,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     8
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
     11
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     13
@@ -47,7 +47,7 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     14
   </div>
   <div>
-    CloudSuite
+    FooBar
   </div>
   <div>
     16
@@ -56,16 +56,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     17
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     19
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     22
@@ -74,16 +74,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     23
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
     26
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     28
@@ -92,7 +92,7 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     29
   </div>
   <div>
-    CloudSuite
+    FooBar
   </div>
   <div>
     31
@@ -101,16 +101,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     32
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     34
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     37
@@ -119,16 +119,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     38
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
     41
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     43
@@ -137,7 +137,7 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     44
   </div>
   <div>
-    CloudSuite
+    FooBar
   </div>
   <div>
     46
@@ -146,16 +146,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     47
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     49
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     52
@@ -164,16 +164,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     53
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
     56
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     58
@@ -182,7 +182,7 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     59
   </div>
   <div>
-    CloudSuite
+    FooBar
   </div>
   <div>
     61
@@ -191,16 +191,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     62
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     64
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     67
@@ -209,16 +209,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     68
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
     71
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     73
@@ -227,7 +227,7 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     74
   </div>
   <div>
-    CloudSuite
+    FooBar
   </div>
   <div>
     76
@@ -236,16 +236,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     77
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     79
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     82
@@ -254,16 +254,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     83
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
     86
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     88
@@ -272,7 +272,7 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     89
   </div>
   <div>
-    CloudSuite
+    FooBar
   </div>
   <div>
     91
@@ -281,16 +281,16 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     92
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     94
   </div>
   <div>
-    Suite
+    Bar
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
     97
@@ -299,10 +299,10 @@ exports[`<Loop /> Snaphot must match defaultRender 1`] = `
     98
   </div>
   <div>
-    Cloud
+    Foo
   </div>
   <div>
-    Suite
+    Bar
   </div>
 </div>
 `;
