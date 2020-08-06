@@ -26,18 +26,15 @@ module.exports = ({ config, mode }) => {
         },
       },
       {
-        loader: 'resolve-url-loader',
-      },
-      {
-        loader: 'sass-loader',
-      },
-      {
         loader: 'postcss-loader',
         options: {
           sourceMap: true,
-          plugins: () => [require('postcss-cssnext')(), require('postcss-preset-env')()],
+          plugins: () => [require('postcss-preset-env')()],
           parser: 'postcss-scss',
         },
+      },
+      {
+        loader: 'sass-loader',
       },
     ],
   })

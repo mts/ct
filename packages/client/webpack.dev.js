@@ -106,7 +106,7 @@ const configurePostcssLoader = buildType => {
           loader: 'postcss-loader',
           options: {
             sourceMap: true,
-            plugins: () => [require('postcss-cssnext')()],
+            plugins: () => [require('postcss-preset-env')()],
             parser: 'postcss-scss',
           },
         },
